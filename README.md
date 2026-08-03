@@ -1,6 +1,9 @@
 # Mental Health Score Predictor
-
 A Machine Learning web application that predicts a student's mental health score based on lifestyle, academic, and social media usage factors.
+
+## Live Application
+https://mental-health-score.streamlit.app/
+
 
 ## Features
 
