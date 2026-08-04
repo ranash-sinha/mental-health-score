@@ -1,7 +1,6 @@
-# ============================================================
+
 # MENTAL HEALTH SCORE PREDICTOR
 # Streamlit Application
-# ============================================================
 
 import math
 import streamlit as st
@@ -9,9 +8,7 @@ import pandas as pd
 import joblib
 import numpy as np
 
-# ------------------------------------------------------------
 # PAGE CONFIG
-# ------------------------------------------------------------
 
 st.set_page_config(
     page_title="Mental Health Score Predictor",
@@ -20,9 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ------------------------------------------------------------
 # LOAD MODEL
-# ------------------------------------------------------------
 
 @st.cache_resource
 def load_model():
@@ -33,9 +28,7 @@ def load_model():
 
 model = load_model()
 
-# ------------------------------------------------------------
-# DESIGN SYSTEM - Glassmorphic / Gradient Theme (No External APIs)
-# ------------------------------------------------------------
+# DESIGN SYSTEM - Glassmorphic / Gradient Theme -- No External APIs
 
 st.markdown("""
 <style>
@@ -298,9 +291,7 @@ section[data-testid="stSidebar"] {
 </style>
 """, unsafe_allow_html=True)
 
-# ------------------------------------------------------------
 # GAUGE LOGIC
-# ------------------------------------------------------------
 
 def polar_to_cartesian(cx, cy, r, angle_deg):
     angle_rad = math.radians(angle_deg - 90)
@@ -370,9 +361,7 @@ def build_gauge_svg(score=None):
 <text x="150" y="165" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" letter-spacing="1" fill="{color}">{label}</text>
 </svg>'''
 
-# ------------------------------------------------------------
 # HEADER
-# ------------------------------------------------------------
 
 st.markdown(
     """
@@ -385,9 +374,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# ------------------------------------------------------------
 # MAIN LAYOUT
-# ------------------------------------------------------------
 
 left_col, right_col = st.columns([1.8, 1], gap="large")
 
@@ -520,9 +507,7 @@ with right_col:
                 unsafe_allow_html=True
             )
 
-# ============================================================
 # SIDEBAR
-# ============================================================
 
 with st.sidebar:
     st.markdown('<div class="side-title">Optimal Score Baseline</div>', unsafe_allow_html=True)
