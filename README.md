@@ -25,18 +25,6 @@ https://mental-health-score.streamlit.app/
 - Joblib
 - Matplotlib
 
-## Project Structure
-
-```
-mental-health-score/
-│
-├── app.py
-├── Mental_Health_Model.pkl
-├── project.ipynb
-├── requirements.txt
-├── README.md
-└── Student Social Media And Mental Health Impact.csv
-```
 
 ---
 
@@ -67,10 +55,4 @@ streamlit run app.py
 ---
 
 
-## Author
-
-Ranash Sinha
-
-B.Tech | NIT Rourkela
-Passionately learning
-AI • Machine Learning • Data Science
+#
