@@ -200,31 +200,4 @@ The application should not be used for making medical decisions.
 
 ---
 
-## What I Learned
 
-Through this project, I worked on:
-
-* Data preprocessing
-* Exploratory Data Analysis
-* Feature engineering
-* Regression models
-* Random Forest
-* Model evaluation
-* Model serialization using Joblib
-* Streamlit application development
-* Machine Learning model deployment
-
----
-
-## Future Improvements
-
-* Try additional regression models
-* Improve hyperparameter tuning
-* Add model explainability
-* Add more relevant features
-* Improve the dataset for better generalization
-* Add more visualizations
-
----
-
-**Built as a Machine Learning project to explore the relationship between student lifestyle, social media usage, and mental health.**
