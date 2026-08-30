@@ -27,19 +27,6 @@ https://mental-health-score.streamlit.app/
 
 ---
 
-## Installation
-
-```bash
-git clone https://github.com/ranash-sinha/mental-health-score.git
-
-cd mental-health-score
-
-pip install -r requirements.txt
-
-streamlit run app.py
-```
-
----
 
 ## Machine Learning Workflow
 
