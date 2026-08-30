@@ -155,24 +155,7 @@ mental-health-score/
 └── README.md
 ```
 
-### Files
 
-**`app.py`**
-Streamlit application for taking user inputs and generating predictions.
-
-**`project.ipynb`**
-Notebook containing data analysis, preprocessing, model training, and evaluation.
-
-**`Mental_Health_Model.pkl`**
-Saved trained machine learning model used by the Streamlit application.
-
-**`Student Social Media And Mental Health Impact.csv`**
-Dataset used for training and analysis.
-
-**`requirements.txt`**
-Required Python libraries for running the project.
-
----
 
 ## Example Input
 
