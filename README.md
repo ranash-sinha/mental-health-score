@@ -1,30 +1,29 @@
 # Mental Health Score Predictor
-A Machine Learning web application that predicts a student's mental health score based on lifestyle, academic, and social media usage factors.
+
+A Machine Learning web application that predicts a student's mental health score based on lifestyle, academic, demographic, and social media usage factors.
 
 ## Live Application
-https://mental-health-score.streamlit.app/
 
+https://mental-health-score.streamlit.app/
 
 ## Features
 
-- Predict Mental Health Score
-- Interactive User Interface
-- Random Forest Regression Model
-- Real-time Prediction
-- Responsive Design
-
-
+* Predict Mental Health Score
+* Interactive User Interface
+* Random Forest Regression Model
+* Real-time Prediction
+* Responsive Design
+* Model-based Score Classification
 
 ## Tech Stack
 
-- Python
-- Streamlit
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
-- Matplotlib
-
+* Python
+* Streamlit
+* Scikit-learn
+* Pandas
+* NumPy
+* Joblib
+* Matplotlib
 
 ---
 
@@ -44,15 +43,218 @@ streamlit run app.py
 
 ## Machine Learning Workflow
 
-- Data Cleaning
-- Feature Engineering
-- Exploratory Data Analysis
-- Model Training
-- Random Forest Regression
-- Model Serialization using Joblib
-- Streamlit Deployment
+* Data Cleaning
+* Exploratory Data Analysis
+* Feature Engineering
+* Data Preprocessing
+* Train-Test Split
+* Model Training
+* Model Comparison
+* Random Forest Regression
+* Model Evaluation
+* Model Serialization using Joblib
+* Streamlit Deployment
 
 ---
 
+## Dataset
 
-#
+The project uses the **Student Social Media and Mental Health Impact** dataset.
+
+The dataset contains information related to:
+
+* Student demographics
+* Social media usage
+* Academic behavior
+* Sleep
+* Physical activity
+* Stress
+* Mental health score
+
+The dataset contains approximately **5,000 student records**.
+
+### Target Variable
+
+**Mental Health Score**
+
+The target is treated as a regression value on a **0–10 scale**.
+
+---
+
+## Input Features
+
+The application uses the following features for prediction:
+
+### Demographics
+
+* Age
+* Gender
+* Country
+* Academic Level
+
+### Social Media & Device Usage
+
+* Average Daily Usage Hours
+* Daily Unlocks
+* Most Used Platform
+* Purpose of Use
+
+### Lifestyle & Academic Factors
+
+* Study Hours
+* Sleep Hours Per Night
+* Physical Activity Hours
+* Stress Level
+
+---
+
+## Models Used
+
+Two regression models were evaluated:
+
+* Linear Regression
+* Random Forest Regression
+
+Linear Regression was used as a baseline model, while Random Forest was used to capture non-linear relationships between the input features and mental health score.
+
+### Model Performance
+
+| Model               | Test R² |
+| ------------------- | ------: |
+| Linear Regression   |   0.740 |
+| Random Forest       |   0.878 |
+| Tuned Random Forest |   0.865 |
+
+The Random Forest model achieved the highest test R² of **0.878** among the evaluated models.
+
+The tuned Random Forest model achieved:
+
+* **R²:** 0.865
+* **MAE:** 0.369
+
+---
+
+## Feature Engineering
+
+The dataset contains many different country categories. These were grouped into a smaller number of categories to make the feature easier to use during model training and prediction.
+
+The application uses country groups such as:
+
+* India
+* USA
+* Canada
+* Australia
+* UK
+* Germany
+* Mexico
+* Turkey
+* France
+* Other
+
+Categorical features are encoded before being passed to the trained model.
+
+---
+
+## Project Structure
+
+```text
+mental-health-score/
+│
+├── app.py
+├── project.ipynb
+├── Mental_Health_Model.pkl
+├── Student Social Media And Mental Health Impact.csv
+├── requirements.txt
+└── README.md
+```
+
+### Files
+
+**`app.py`**
+Streamlit application for taking user inputs and generating predictions.
+
+**`project.ipynb`**
+Notebook containing data analysis, preprocessing, model training, and evaluation.
+
+**`Mental_Health_Model.pkl`**
+Saved trained machine learning model used by the Streamlit application.
+
+**`Student Social Media And Mental Health Impact.csv`**
+Dataset used for training and analysis.
+
+**`requirements.txt`**
+Required Python libraries for running the project.
+
+---
+
+## Example Input
+
+```text
+Age: 20
+Gender: Male
+Country: India
+Academic Level: Undergraduate
+
+Daily Screen Time: 4 hours
+Daily Unlocks: 70
+Primary Platform: YouTube
+Purpose: Education
+
+Study Hours: 5 hours
+Sleep: 7 hours
+Physical Activity: 1 hour
+Stress Level: Medium
+```
+
+The application processes these inputs and generates a predicted mental health score.
+
+---
+
+## Limitations
+
+* The model is trained on a specific dataset and may not generalize to all student populations.
+* Some variables may be self-reported.
+* A single score cannot fully represent a person's mental health.
+* Predictions depend on the quality and distribution of the training data.
+* The prediction should not be considered a medical or psychological diagnosis.
+
+---
+
+## Disclaimer
+
+This project is created for **educational and learning purposes**.
+
+The predicted score is generated by a Machine Learning model and **is not a medical or psychological diagnosis**.
+
+The application should not be used for making medical decisions.
+
+---
+
+## What I Learned
+
+Through this project, I worked on:
+
+* Data preprocessing
+* Exploratory Data Analysis
+* Feature engineering
+* Regression models
+* Random Forest
+* Model evaluation
+* Model serialization using Joblib
+* Streamlit application development
+* Machine Learning model deployment
+
+---
+
+## Future Improvements
+
+* Try additional regression models
+* Improve hyperparameter tuning
+* Add model explainability
+* Add more relevant features
+* Improve the dataset for better generalization
+* Add more visualizations
+
+---
+
+**Built as a Machine Learning project to explore the relationship between student lifestyle, social media usage, and mental health.**
